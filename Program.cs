@@ -1,4 +1,6 @@
-﻿using System;
+﻿
+using DesignPatterns_FactoryMethod_2.src;
+using DesignPatterns_FactoryMethod_2.src.FactoriesConcretas;
 
 namespace DesignPatterns_FactoryMethod_2
 {
@@ -6,7 +8,18 @@ namespace DesignPatterns_FactoryMethod_2
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            LanchesFactory factory ;
+            var pedido = System.Console.ReadLine();
+            System.Console.WriteLine("asdasd");
+
+            if(pedido == "frango")
+                factory = new LancheFrango();
+            else
+                factory = new LancheCalabresa();
+
+            factory.CriarLanche();
+            System.Console.WriteLine("termino");
+            
         }
     }
 }

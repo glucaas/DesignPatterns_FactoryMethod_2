@@ -5,8 +5,10 @@ namespace DesignPatterns_FactoryMethod_2.src
 {
     public abstract class LanchesFactory
     {
-        public List<Ingrediente> Ingredientes { get{ return new List<Ingrediente>();} }
-        private IEnumerable<Ingrediente> _ingredientes = new List<Ingrediente>();
+        private List<Ingrediente> _ingredientes = new List<Ingrediente>();
+
+        public List <Ingrediente> Ingredientes {get{ return _ingredientes;}}
+        public int MyProperty { get; set; }       
 
         
         public LanchesFactory()
